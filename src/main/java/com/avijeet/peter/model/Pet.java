@@ -5,11 +5,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collation = "pets")
+@Document(collection = "pets")
 public class Pet {
     @Id
     private String id;
     private String name;
     private String breed;
     private Integer age;
+    private String ownerName;
 }
