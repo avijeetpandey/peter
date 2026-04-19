@@ -16,4 +16,7 @@ public class PetInput {
 
     @Min(value = 0, message = "Age cannot be negative")
     private Integer age;
+
+    @NotBlank(message = "Owner name must be specified")
+    private String ownerName;
 }

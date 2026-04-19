@@ -35,6 +35,7 @@ input PetInput {
     name: String!
     breed: String!
     age: Int!
+    ownerName: String!
 }
 
 input RoutineInput {

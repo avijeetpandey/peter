@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collation = "daily_routines")
+@Document(collection = "daily_routines")
 public class DailyRoutine {
     @Id
     private String id;
