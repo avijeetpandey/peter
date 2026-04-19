@@ -1,0 +1,44 @@
+type Query {
+    getPet(id: ID!): Pet
+    getAllPets: [Pet]
+}
+
+type Mutation {
+    createPet(input: PetInput!): Pet
+    addRoutine(input: RoutineInput!): DailyRoutine
+}
+
+type Pet {
+    id: ID!
+    name: String!
+    breed: String!
+    age: Int!
+    ownerName: String!
+}
+
+type DailyRoutine {
+    id: ID!
+    petId: ID!
+    taskType: TaskType!
+    scheduledTime: String!
+    completed: Boolean!
+}
+
+enum TaskType {
+    FEEDING
+    WALK
+    VET_APPOINTMENT
+    MEDICATION
+}
+
+input PetInput {
+    name: String!
+    breed: String!
+    age: Int!
+}
+
+input RoutineInput {
+    petId: ID!
+    taskType: TaskType!
+    scheduledTime: String!
+}
